@@ -1,0 +1,19 @@
+<mat-card *ngIf="product">
+  <img
+    mat-card-image
+    *ngIf="product?.image"
+    class="product-image"
+    alt="Product Image"
+    [src]="product.image"
+  />
+  <mat-card-content>
+    <span>{{ product.title }}</span>
+    <p>{{ product.description }}</p>
+    <span>{{ product.price }}</span>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">
+      <mat-icon>visibility</mat-icon>View Details
+    </button>
+  </mat-card-actions>
+</mat-card>
